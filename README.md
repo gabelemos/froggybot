@@ -5,5 +5,3 @@ Tenho como objetivo, pegar itens que foram cadastrados numa planilha (Google Pla
 e aí assim, a partir disso, enviá-los no(s) grupo(s) que estou inserido.
 
 - Dentro de "creds.json" observe que o **chat_id_test** é o SEU chat privado, ou algum grupo que você queira pôr para testes.
-
-Esse bot foi criado com ajuda de <a href="https://github.com/sergiobfj/">Sergio Barbosa</a>
