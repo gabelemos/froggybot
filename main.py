@@ -98,18 +98,10 @@ def envioUnico():
     i = df_to_send.index[0]
     product = df.loc[i].to_dict()
 
-    # Encurtador de URL
-    body = {"url": product['LINK']}
-    try:
-        response = requests.post(shortner_url, json=body)
-        response.raise_for_status() # Lança exceção para erros HTTP
-        product_url = response.json()
-        final_link = product_url.get("urlEncurtada", product['LINK'])
-    except requests.exceptions.RequestException as e:
-        print(f"[FROGGY-LOG] ERRO ao encurtar URL ({shortner_url}): {e}. Usando link original.")
-        final_link = product['LINK']
+
+    print(f"[FROGGY-LOG] ERRO ao encurtar URL ({shortner_url}): {e}. Usando link original.")
+    final_link = product['LINK']
     
-    print(f"Link final usado: {final_link}")
     print(f"[FROGGY-LOG] PRODUTO ENVIADO! ID: {i} | NOME: {product['NOME']} | - {datetime.now()}")
 
     # Mensagem
